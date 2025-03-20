@@ -1,0 +1,182 @@
+accessibilityJob: false
+alwaysRunPostSteps: false
+appium: null
+autosplit: true
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+cacheKey: '{{ checksum "packages.lock.json" }}'
+captureScreenRecordingForScenarios: false
+codeDirectory: Playwright102_project
+collectLocalGitData: true
+combineTasksInMatrixMode: false
+concurrency: 3
+cypress: false
+differentialUpload:
+    enabled: false
+    forcedDisabled: false
+    ttlHours: null
+dynamicAllocation: false
+errorCategorizedOnFailureOnly: false
+framework:
+    additional_args: null
+    args:
+        appId: ""
+        appPath: ""
+        artifacts: false
+        avoidAppLaunch: false
+        deviceSelectionStrategy: ""
+        devices: []
+        disableReleaseDevice: false
+        filters:
+            attributes: []
+        fixedIP: ""
+        isRealMobile: null
+        isVirtualDevice: false
+        language: ""
+        locale: ""
+        minorOsVersion: false
+        mitmProxy: false
+        mobileDC: null
+        networkHar: false
+        otherApps: []
+        platformName: ""
+        playwrightRD: false
+        preservedDevice: false
+        queueTimeout: 0
+        resignApp: true
+        shards:
+            mappings: []
+        skipInstall: false
+        skipUninstallPreviousBuild: false
+        skipXMLOnRun: false
+        testSuiteAppId: ""
+        testSuitePath: ""
+        uninstallPreviousBuild: false
+        xcTestPlanId: ""
+        xcTestPlanPath: ""
+    baseCommand: ""
+    defaultReports: false
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    downloadURL: ""
+    flags: []
+    isTestNGXMLSuite: false
+    licenseKey: ""
+    name: ""
+    runnerFlags: []
+    toscaArgs: null
+    userdefinediscovery: false
+    version: ""
+    workingDirectory: ""
+globalPost:
+    commands: []
+    completed: false
+    mode: ""
+    runson: ""
+    shell: ""
+    workingDirectory: ""
+globalPre:
+    cache: false
+    commands: []
+    completed: false
+    location: ""
+    maxRetries: 0
+    mode: ""
+    runson: ""
+    shell: ""
+    type: ""
+    workingDirectory: ""
+globalTimeout: 150
+jobID: dc428b5e-37e5-4d83-981f-6c1e919cac10
+jobLabel:
+    - playwright-Dotnet
+    - win
+    - autosplit
+key: LT_km9Px0t0c89vVuJwd07eqIfXfbQ6hnSum4NJs9y5XaqEatN
+localHTTPProxy: ""
+matrix:
+    browser:
+        - chromium
+        - firefox
+    os:
+        - win
+    verion:
+        - latest
+maxRetries: 3
+maxRetriesPreSteps: 0
+mergeArtifacts: true
+meta: {}
+parallelism: 1
+platformConfig: null
+post:
+    - cat yaml/dotnet_playwright_hyperexecute_autosplit_sample.yaml
+postDirectives:
+    commands:
+        - cat yaml/dotnet_playwright_hyperexecute_autosplit_sample.yaml
+    shell: ""
+    workingDirectory: ""
+pre:
+    - npm install -g npm@9.6.7
+    - npm config set fund false
+    - npm install playwright@1.50.0
+    - npx playwright install chromium
+    - npx playwright install firefox
+    - dotnet build
+preDirectives:
+    commands:
+        - npm install -g npm@9.6.7
+        - npm config set fund false
+        - npm install playwright@1.50.0
+        - npx playwright install chromium
+        - npx playwright install firefox
+        - dotnet build
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+project:
+    id: ""
+    name: ""
+    type: default
+projectpath: ""
+regionConfig:
+    storage:
+        enabled: false
+        name: ""
+        platform: azure
+        region: ""
+    vm: []
+report: true
+retryOnFailure: true
+runson: ${matrix.os}
+runtime:
+    language: dotnet
+    version: "8.0"
+    addons: []
+    opts: {}
+slackChannel: ""
+sourcePayload:
+    verifySSL: true
+storageType: ""
+testDiscovery:
+    autosubset: true
+    command: grep -lr 'GotoAsync' -ir --include=*.cs
+    mode: dynamic
+    type: raw
+    winCommand: grep -lr 'GotoAsync' -ir --include=*.cs
+testDiscoveryResultV3: []
+testRunnerCommand: dotnet run $test
+testSuiteStep: 150
+testSuiteTimeout: 10
+testSuites: []
+testType: playwright
+triggerMode: false
+tunnelOpts:
+    testsPerTunnel: 10
+unzipPayload: false
+user: pratibha_jamdare
+version: "0.1"
+waitForArtefactsUpload: false
+whiteLabelProductTag: ""
+winParallelism: 1
+winTestRunnerCommand: dotnet run $test

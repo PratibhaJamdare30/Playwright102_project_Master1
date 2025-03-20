@@ -1,0 +1,176 @@
+{
+    "id": "dc428b5e-37e5-4d83-981f-6c1e919cac10",
+    "created_at": "2025-03-18T16:47:41Z",
+    "update_at": "2025-03-18T16:51:34Z",
+    "global_timeout": 150,
+    "tunnel_name": "",
+    "start_time": "2025-03-18T16:49:27Z",
+    "end_time": "2025-03-18T16:51:34Z",
+    "summary": {
+        "total_time": 127000000000,
+        "execution_time": 127000000000,
+        "total_tasks": 2,
+        "build_time_consumed": 252000000000,
+        "jobTestExecutionTime": "2s",
+        "failed_tasks": 0,
+        "total_stage_info": {
+            "postrun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            },
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            },
+            "scenario": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            }
+        },
+        "status": "skipped",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=dc428b5e-37e5-4d83-981f-6c1e919cac10"
+    },
+    "tasks": [
+        {
+            "id": "de4fc1f0-a127-4eab-bc2c-8734fec2602d",
+            "os": "win",
+            "status": "skipped",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-03-18T16:48:30Z",
+            "update_at": "2025-03-18T16:51:34Z",
+            "start_time": "2025-03-18T16:49:29Z",
+            "end_time": "2025-03-18T16:51:34Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "45e49375-6dac-48b8-b60b-7c2ac2fa5e58",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-03-18T16:50:16Z",
+                    "started_at": "2025-03-18T16:50:16Z",
+                    "updated_at": "2025-03-18T16:51:30Z",
+                    "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "f380400d-945c-45df-a6cf-016a3c7b0d5d",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-03-18T16:51:30Z",
+                    "started_at": "2025-03-18T16:51:30Z",
+                    "updated_at": "2025-03-18T16:51:31Z",
+                    "order": 3,
+                    "task_number": 1
+                },
+                {
+                    "id": "14e86357-e178-4224-ae39-ef01a13fde4f",
+                    "type": "scenario",
+                    "status": "skipped",
+                    "name": "tests/PlaywrightTest.cs",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-03-18T16:51:31Z",
+                    "started_at": "2025-03-18T16:51:32Z",
+                    "updated_at": "2025-03-18T16:51:34Z",
+                    "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "b5d44f03-263a-4fb7-92ff-3b0118e6fa3f",
+                    "type": "postrun",
+                    "status": "completed",
+                    "name": "post",
+                    "iteration": 0,
+                    "link": "post.log",
+                    "created_at": "2025-03-18T16:51:31Z",
+                    "started_at": "2025-03-18T16:51:34Z",
+                    "updated_at": "2025-03-18T16:51:34Z",
+                    "order": 5,
+                    "task_number": 1
+                }
+            ]
+        },
+        {
+            "id": "a6e6f8a8-6dd5-42ba-8337-6be9813e1b81",
+            "os": "win",
+            "status": "skipped",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-03-18T16:48:30Z",
+            "update_at": "2025-03-18T16:51:34Z",
+            "start_time": "2025-03-18T16:49:27Z",
+            "end_time": "2025-03-18T16:51:34Z",
+            "group_number": 2,
+            "stages": [
+                {
+                    "id": "9b0f6ed5-831b-472e-b64b-cc45c47dfd13",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-03-18T16:50:16Z",
+                    "started_at": "2025-03-18T16:50:16Z",
+                    "updated_at": "2025-03-18T16:51:30Z",
+                    "order": 2,
+                    "task_number": 2
+                },
+                {
+                    "id": "c2108f4a-e92f-451f-8752-b22c1ec0e858",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-03-18T16:51:30Z",
+                    "started_at": "2025-03-18T16:51:30Z",
+                    "updated_at": "2025-03-18T16:51:30Z",
+                    "order": 3,
+                    "task_number": 2
+                },
+                {
+                    "id": "ec4e82f1-c623-47b3-9b8b-a6bed80ac854",
+                    "type": "scenario",
+                    "status": "skipped",
+                    "name": "tests/PlaywrightTest.cs",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-03-18T16:51:30Z",
+                    "started_at": "2025-03-18T16:51:32Z",
+                    "updated_at": "2025-03-18T16:51:33Z",
+                    "order": 4,
+                    "task_number": 2
+                },
+                {
+                    "id": "ed1682f7-21fc-401d-8889-97bddbe63753",
+                    "type": "postrun",
+                    "status": "completed",
+                    "name": "post",
+                    "iteration": 0,
+                    "link": "post.log",
+                    "created_at": "2025-03-18T16:51:30Z",
+                    "started_at": "2025-03-18T16:51:34Z",
+                    "updated_at": "2025-03-18T16:51:34Z",
+                    "order": 5,
+                    "task_number": 2
+                }
+            ]
+        }
+    ],
+    "test_ids": null
+}

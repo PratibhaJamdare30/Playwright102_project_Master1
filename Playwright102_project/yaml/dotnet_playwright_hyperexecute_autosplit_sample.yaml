@@ -1,0 +1,59 @@
+﻿---
+version: 0.1
+globalTimeout: 150
+testSuiteTimeout: 10
+testSuiteStep: 150
+parallelism: 1
+runson: ${matrix.os}
+headless: true
+matrix:
+    os: ["win",]
+    browser: ["chromium","firefox"]
+    verion: ["latest"]
+
+concurrency: 3
+
+autosplit: true
+
+retryOnFailure: true
+
+maxRetries: 3
+ 
+
+pre:
+- npm install -g npm@9.6.7
+- npm config set fund false
+- npm install playwright@1.50.0 
+- npx playwright install chromium
+- npx playwright install firefox
+- dotnet build
+
+env:
+TARGET_OS: Windows 10
+report: true
+
+runtime:
+  language: dotnet
+  version: "8.0" 
+
+# Dependency caching for Windows
+cacheKey: '{{ checksum "packages.lock.json" }}'
+
+mergeArtifacts: true
+# uploadArtifacts:
+#     - name: LambdaTest Reports
+#       path:
+#         - Playwright-Report/index.html
+ 
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr 'GotoAsync' -ir --include=*.cs 
+
+post:
+  - cat yaml/dotnet_playwright_hyperexecute_autosplit_sample.yaml
+
+testRunnerCommand: dotnet run $test    
+
+jobLabel: [playwright-Dotnet, win, autosplit]
